@@ -4,11 +4,11 @@ setwd("C://Users//JKJ//Desktop//DS Courses//04 - Exploratory Data Analysis//Proj
 	#Set wd to avoid having to type long filename
 
 dataset <- read.table("newDataset.txt",
-					   header = T,
-					   sep = "\t",
-					   #colClasses=c('character', 'character', 'numeric', 'numeric', 'numeric', 
-                       #'numeric', 'numeric', 'numeric', 'numeric'),
-					   na.strings = "?")
+	header = T,
+	sep = "\t",
+	#colClasses=c('character', 'character', 'numeric', 'numeric', 'numeric', 
+        #'numeric', 'numeric', 'numeric', 'numeric'),
+	na.strings = "?")
 
 x <- paste(dataset$Date, dataset$Time)
 dataset$DT <- strptime(x, "%d/%m/%Y %H:%M:%S")
